@@ -1,0 +1,209 @@
+.container{
+  .c-aside-left{
+    position: fixed;
+  }
+  mat-list-item.mat-list-item{
+    font-size: 14px;
+    &:hover{
+      cursor: pointer;
+      color: #1DA1F2;
+
+    }
+  }
+  .btnSign{
+    background: #2FBDE2;
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  //second section
+  .c-main{
+    border-left: 0.5px solid #E6ECF0;
+    border-right: 0.5px solid #E6ECF0;
+    padding: 0px;
+    left: 18%;
+    position: relative;
+    h5.cm-title{
+      padding: 15px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      border-bottom: 0.5px solid #E6ECF0;
+    }
+
+    .cm-peep{
+      margin: 0px;
+      padding: 10px 0px;
+      border-bottom: 5px solid #E6ECF0;
+      .cmp-img img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%
+      }
+      .cmp-form{
+        textarea{
+          resize: none;
+          border: none;
+          width: 100%;
+          font-size: 22px;
+          overflow: hidden;
+          &:focus{
+            outline: none !important;
+          }
+        }
+        div{
+          padding-right: 20px;
+          mat-icon.mat-icon{
+            color: #2FBDE2;
+            font-size: 30px;
+            display: inline-block;
+
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          button{
+            display: inline-block;
+            max-width: 20px !important;
+          }
+        }
+      }
+    }
+
+
+    .cm-timeline{
+      padding: 10px;
+      border-bottom: 0.5px solid #E6ECF0;
+      margin: 0px;
+      &:hover{
+        cursor: pointer;
+        background: #F5F8FA;
+      }
+      .cmt-img img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+      .cmt-text{
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        span#cmttt-handle{
+          color: #8699A5
+        }
+        .cmtt-img {
+          margin-bottom: 10px;
+          img{
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #E6ECF0;
+          }
+        }
+
+        .cmtt-action{
+          width: 100%;
+          margin: 0px;
+          color: #657786;
+
+          .ca-action:first-child{
+
+            &:hover{
+              color: #E23237;
+            }
+          }
+          .ca-action:nth-child(3){
+
+            &:hover{
+              color: #2FBDE2;;
+            }
+          }
+          .ca-action:last-child{
+            &:hover{
+              color: #77B255;
+            }
+          }
+          .ca-count{
+            padding: 2px !important;
+          }
+        }
+      }
+    }
+  }
+
+  // aside-right
+  .c-aside-right{
+    right: 8%;
+    position: fixed;
+    padding-top: 10px;
+
+    .car-search{
+      mat-form-field.mat-form-field{
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+
+    .car-suggest{
+      background: #F5F8FA;
+      padding: 10px 0px;
+      border-radius: 10px;
+      h6{
+        font-family: 'Fira Sans', sans-serif;
+        padding: 10px;
+        border-bottom: 0.5px solid #E6ECF0;
+        font-weight: bolder;
+      }
+    }
+    .cars-contact{
+      margin: 0;
+      border-bottom: 0.5px solid #E6ECF0;
+      padding: 5px 0px;
+      .carsc-1{
+        padding: 0px 5px;
+        img{
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+        }
+      }
+      .carsc-2{
+        padding: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        .handle{
+          color: #8A97A4;
+        }
+      }
+      .carsc-3{
+        padding: 0px;
+        padding-right: 5px;
+        .btnFollow{
+          color: #1DA1F2;
+          border: 1px solid #1DA1F2;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          background: #FFF;
+          border-radius: 20px;
+          font-weight: bold;
+          font-size: 10px;
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .c-main{
+    width: 90%;
+  }
+  .aLogo{
+    display: none;
+  }
+  .cmp-form{
+    textarea{
+      font-size: 14px;
+    }
+  }
+  .c-aside-right{
+    display: none;
+  }
+
+}

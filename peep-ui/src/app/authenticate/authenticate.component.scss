@@ -1,0 +1,77 @@
+
+.homeContainer{
+  max-width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to left, #31BCE2, #FFF, #FFFFFF);
+  .row{
+    height: 100%;
+
+    .homeImg{
+
+      img{
+        width: 100%;
+      }
+    }
+    .card-signin{
+      border: none;
+      margin-top: 60px !important;
+      width: 80%;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+      .mat-form-group{
+        width: 100%;
+      }
+      mat-form-field.mat-form-field {
+        font-size: 13px;
+      }
+      mat-icon{
+        color: #31BCE2;
+      }
+        .cs-topDesign{
+          display: flex;
+          height: 5px;
+
+          .cst1{
+            flex: 3.3;
+            background: #82C901;
+            border-top-left-radius: 8px;
+          }
+
+          .cst2{
+            flex: 3.3;
+            background: #2FBDE3;
+          }
+          .cst3{
+            flex: 3.3;
+            background: #FC9603;
+            border-top-right-radius: 8px;
+          }
+        }
+
+        #cb-signup{
+          // display: none;
+
+          .agreement{
+            font-size: 10px;
+            text-align: center;
+            width: 95%;
+            margin: 0 auto;
+          }
+        }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+  .btnSign{
+    background: #2FBDE2;
+    color: #fff;
+  }
+  .b-anchor{
+    &:hover{
+      cursor: pointer; text-decoration: underline;
+    }
+  }
+}
+
+
