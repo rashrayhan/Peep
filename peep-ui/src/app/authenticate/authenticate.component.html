@@ -1,0 +1,97 @@
+
+
+<div class="container-fluid homeContainer">
+  <div class="row ">
+    <div class="col-sm-3 col-md-5 col-lg-8 homeImg">
+      <img src="assets/output-onlinepngtools.png"/>
+
+    </div>
+
+    <div class="col-sm-9 col-md-7 col-lg-4 mx-auto homeForm">
+
+      <div class="card card-signin">
+        <div class="cs-topDesign">
+          <span class="cst1"></span>
+          <span class="cst2"></span>
+          <span class="cst3"></span>
+        </div>
+        <div class="card-body cb-signIn" *ngIf="isShow">
+
+          <form class="form-signin" >
+              <br/>
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Your Email</mat-label>
+                  <input type="email" matInput placeholder="example@email.com" autofocus>
+                  <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Your Password</mat-label>
+                  <input type="password" matInput placeholder="******" [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+              </mat-form-field>
+
+            <button routerLink="/timeline" class="btn btn-lg btn-block btnSign" mat-raised-button>Login</button>
+            <hr class="my-4">
+
+          </form>
+          <br/>
+          <p class="text-center">Don't have account? <a class="text-primary b-anchor" (click)="showForm()">sign up</a></p>
+
+        </div>
+
+        <!-- sign up-->
+        <div class="card-body" id="cb-signup" *ngIf="!isShow">
+            <form class="form-signin">
+
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Name</mat-label>
+                  <input type="text" matInput placeholder="name" required autofocus>
+                  <mat-icon matSuffix>person_outline</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput placeholder="example@email.com" required>
+                  <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Peep handle</mat-label>
+                  <input type="text" matInput placeholder="desired peep handle" required>
+                  <mat-icon matSuffix>perm_identity</mat-icon>
+              </mat-form-field>
+
+              <!-- <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Year of birth</mat-label>
+                  <input type="number" matInput placeholder="e.g. 1970" required>
+                  <mat-icon matSuffix>date_range</mat-icon>
+              </mat-form-field> -->
+
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput placeholder="******" [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+              </mat-form-field>
+
+              <div class="form-label-group ">
+                  <p class="agreement">By signing up, you agree that others will be able to find you by email or phone number you provided</p>
+              </div>
+              <br/>
+              <button  class="btn btn-lg btn-block btnSign" mat-raised-button >Signup</button>
+
+            </form>
+            <br/>
+            <p class="text-center">Sign into <a class="text-primary b-anchor" (click)="showForm()">peep</a></p>
+          </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
