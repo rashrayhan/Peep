@@ -1,0 +1,282 @@
+<div class="container">
+  <div class="row" >
+    <div class="col-2 c-aside-left">
+      <mat-list>
+        <mat-list-item>
+          <img class="aLogo" src="assets/logo.jpeg" style="height: 100px; width: 100px;"/>
+        </mat-list-item>
+
+        <mat-list-item title="home" routerLink="/timeline">
+          <mat-icon mat-list-icon>home</mat-icon>
+          <h4 mat-line>Home</h4>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item title="bookmarks">
+          <mat-icon mat-list-icon>bookmark_border</mat-icon>
+          <h4 mat-line>Bookmarks</h4>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item title="following" routerLink="/following/following">
+          <mat-icon mat-list-icon>reply</mat-icon>
+          <h4 mat-line>Following</h4>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item title="follower" routerLink="/following/follower">
+          <mat-icon mat-list-icon style="transform: rotate(180deg)">reply</mat-icon>
+          <h4 mat-line>Follower</h4>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item title="profile" routerLink="/profile">
+          <mat-icon mat-list-icon>account_circle</mat-icon>
+          <h4 mat-line>Profile</h4>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item title="settings">
+          <mat-icon mat-list-icon>settings</mat-icon>
+          <h4 mat-line>Settings</h4>
+        </mat-list-item>
+      </mat-list>
+      <br/>
+      <button class="btn btn-lg btn-block btnSign" mat-raised-button (click)="openDialog()">peep</button>
+
+    </div>
+
+    <div class="col-md-6 col-sm-10 c-main">
+
+      <h5 class="row cm-title">
+        <mat-icon mat-raised-button id="cm-back" class="col-1" routerLink="/timeline">keyboard_backspace</mat-icon>
+        <p class="col-8"><b>John Doe</b> <br/><span class="handle">@azarq_m</span></p>
+      </h5>
+
+      <!-- follow -->
+      <div class="cm-tab">
+          <mat-tab-group mat-align-tabs="center" animationDuration="500ms" mat-stretch-tabs>
+              <mat-tab label="Followers" id="follower">
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2" routerLink="/user">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of Defense. It confronts the roots of extremism & promotes the true understanding of Islam</span></span>
+                      <span class="col-2 carsc-3">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of Defense. It confronts the roots of extremism & promotes the true understanding of Islam</span></span>
+                      <span class="col-2 carsc-3">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The slam</span></span>
+                      <span class="col-2 carsc-3">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of Defense. It confronts the roots of extremism & promotes the true understanding of Islam</span></span>
+                      <span class="col-2 carsc-3">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of Defense. It confronts the roots of extremism & promotes the true understanding of Islam</span></span>
+                      <span class="col-2 carsc-3">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+                      </span>
+                  </div>
+
+
+              </mat-tab>
+              <!-- end of followers -->
+
+              <mat-tab label="Following" id="following">
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2" routerLink="/user">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of Defense. It confronts the roots of extremism & promotes the true understanding of Islam</span></span>
+                      <span class="col-2 carsc-3 carsc-f-btn">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Following</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of Defense. It confronts the roots of </span></span>
+                      <span class="col-2 carsc-3 carsc-f-btn">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Following</button>
+                      </span>
+                  </div>
+
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Canding of Islam</span></span>
+                      <span class="col-2 carsc-3 carsc-f-btn">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Following</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfare Center is affiliated with the Saudi Ministry of </span></span>
+                      <span class="col-2 carsc-3 carsc-f-btn">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Following</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">The Ideological Warfm</span></span>
+                      <span class="col-2 carsc-3 carsc-f-btn">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Following</button>
+                      </span>
+                  </div>
+
+                  <div class="row cars-contact">
+                      <span class="col-1 carsc-1">
+                          <img class="aAvatar" src="assets/avatar.png"/>
+                      </span>
+                      <span class="col-8 carsc-2">
+                          <b>MilanMiranda.</b> <br/>
+                          <span class="handle">@azarq_m</span><br/>
+                          <span class="bio">Thef Islam</span></span>
+                      <span class="col-2 carsc-3 carsc-f-btn">
+                        <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Following</button>
+                      </span>
+                  </div>
+              </mat-tab>
+          </mat-tab-group>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="col-3 c-aside-right">
+      <div class="car-search">
+          <mat-form-field appearance="outline" class="mat-form-group">
+              <mat-label>Search Peep</mat-label>
+              <input type="email" matInput placeholder="search">
+              <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+      </div>
+      <div class="car-suggest">
+        <h6>Who to follow</h6>
+        <!-- contact row -->
+        <div class="row cars-contact">
+            <span class="col-2 carsc-1">
+                <img class="aAvatar" src="assets/avatar.png"/>
+            </span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>MilanMiranda.</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-4 carsc-3">
+              <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+            </span>
+        </div>
+        <!-- contact row -->
+        <div class="row cars-contact">
+            <span class="col-2 carsc-1">
+                <img class="aAvatar" src="assets/avatar.png"/>
+            </span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-4 carsc-3">
+              <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+            </span>
+        </div>
+        <!-- contact row -->
+        <div class="row cars-contact">
+            <span class="col-2 carsc-1">
+                <img class="aAvatar" src="assets/avatar.png"/>
+            </span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-4 carsc-3">
+              <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+            </span>
+        </div>
+        <!-- contact row -->
+        <div class="row cars-contact">
+            <span class="col-2 carsc-1">
+                <img class="aAvatar" src="assets/avatar.png"/>
+            </span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-4 carsc-3">
+              <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+            </span>
+        </div>
+        <!-- contact row -->
+        <div class="row cars-contact">
+            <span class="col-2 carsc-1">
+                <img class="aAvatar" src="assets/avatar.png"/>
+            </span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-4 carsc-3">
+              <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
+            </span>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,11 +3,11 @@ import { MatDialog } from '@angular/material';
 import { DialogpeepComponent } from '../dialogpeep/dialogpeep.component';
 
 @Component({
-  selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+  selector: 'app-following',
+  templateUrl: './following.component.html',
+  styleUrls: ['./following.component.scss']
 })
-export class TimelineComponent implements OnInit {
+export class FollowingComponent implements OnInit {
   constructor(
     public dialog: MatDialog
   ) { }

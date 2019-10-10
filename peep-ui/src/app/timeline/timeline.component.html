@@ -6,7 +6,7 @@
           <img class="aLogo" src="assets/logo.jpeg" style="height: 100px; width: 100px;"/>
         </mat-list-item>
 
-        <mat-list-item title="home">
+        <mat-list-item title="home" routerLink="/timeline">
           <mat-icon mat-list-icon>home</mat-icon>
           <h4 mat-line>Home</h4>
         </mat-list-item>
@@ -17,17 +17,19 @@
           <h4 mat-line>Bookmarks</h4>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item title="following">
+
+        <mat-list-item title="following" routerLink="/following/following">
           <mat-icon mat-list-icon>reply</mat-icon>
           <h4 mat-line>Following</h4>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item title="follower">
+
+        <mat-list-item title="follower" routerLink="/following/follower">
           <mat-icon mat-list-icon style="transform: rotate(180deg)">reply</mat-icon>
           <h4 mat-line>Follower</h4>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item title="profile">
+        <mat-list-item title="profile" routerLink="/profile">
           <mat-icon mat-list-icon>account_circle</mat-icon>
           <h4 mat-line>Profile</h4>
         </mat-list-item>
@@ -38,7 +40,7 @@
         </mat-list-item>
       </mat-list>
       <br/>
-      <button class="btn btn-lg btn-block btnSign" mat-raised-button>peep</button>
+      <button class="btn btn-lg btn-block btnSign" mat-raised-button (click)="openDialog()">peep</button>
 
     </div>
 
@@ -47,7 +49,7 @@
 
       <div class="row cm-peep">
         <span class="col-1 cmp-img">
-            <img class="aLogo" src="assets/avatar.png"/>
+            <img class="aAvatar" src="assets/avatar.png"/>
         </span>
 
         <span class="col-11 cmp-form">
@@ -55,7 +57,7 @@
               <textarea matInput placeholder="What's happening?" resize="false"></textarea>
               <div class="row">
                   <mat-icon class="col">image_outline</mat-icon>
-                  <button routerLink="/" class="col btn btn-lg btn-block btnSign" mat-raised-button>peep</button>
+                  <button routerLink="" class="col btn btn-lg btn-block btnSign" mat-raised-button>peep</button>
               </div>
             </form>
         </span>
@@ -64,7 +66,7 @@
       <div class="cm-timelines">
         <div class="cm-timeline row">
           <span class="col-1 cmt-img">
-              <img class="aLogo" src="assets/avatar.png"/>
+              <img class="aAvatar" src="assets/avatar.png"/>
           </span>
 
           <span class="col-11 cmt-text">
@@ -92,7 +94,7 @@
         <!-- timeline -->
         <div class="cm-timeline row">
           <span class="col-1 cmt-img">
-              <img class="aLogo" src="assets/avatar.png"/>
+              <img class="aAvatar" src="assets/avatar.png"/>
           </span>
 
           <span class="col-11 cmt-text">
@@ -122,7 +124,7 @@
         <!-- timeline -->
         <div class="cm-timeline row">
           <span class="col-1 cmt-img">
-              <img class="aLogo" src="assets/avatar.png"/>
+              <img class="aAvatar" src="assets/avatar.png"/>
           </span>
 
           <span class="col-11 cmt-text">
@@ -152,7 +154,7 @@
         <!-- timeline -->
         <div class="cm-timeline row">
           <span class="col-1 cmt-img">
-              <img class="aLogo" src="assets/avatar.png"/>
+              <img class="aAvatar" src="assets/avatar.png"/>
           </span>
 
           <span class="col-11 cmt-text">
@@ -180,7 +182,7 @@
         <!-- timeline -->
         <div class="cm-timeline row">
           <span class="col-1 cmt-img">
-              <img class="aLogo" src="assets/avatar.png"/>
+              <img class="aAvatar" src="assets/avatar.png"/>
           </span>
 
           <span class="col-11 cmt-text">
@@ -212,6 +214,8 @@
     </div>
 
 
+
+
     <div class="col-3 c-aside-right">
       <div class="car-search">
           <mat-form-field appearance="outline" class="mat-form-group">
@@ -223,11 +227,11 @@
       <div class="car-suggest">
         <h6>Who to follow</h6>
         <!-- contact row -->
-        <div class="row cars-contact">
+        <div class="row cars-contact" >
             <span class="col-2 carsc-1">
-                <img class="aLogo" src="assets/avatar.png"/>
+                <img class="aAvatar" src="assets/avatar.png"/>
             </span>
-            <span class="col-6 carsc-2"><b>MilanMiranda.</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>MilanMiranda.</b> <br/><span class="handle">@azarq_m</span></span>
             <span class="col-4 carsc-3">
               <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
             </span>
@@ -235,9 +239,9 @@
         <!-- contact row -->
         <div class="row cars-contact">
             <span class="col-2 carsc-1">
-                <img class="aLogo" src="assets/avatar.png"/>
+                <img class="aAvatar" src="assets/avatar.png"/>
             </span>
-            <span class="col-6 carsc-2"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
             <span class="col-4 carsc-3">
               <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
             </span>
@@ -245,9 +249,9 @@
         <!-- contact row -->
         <div class="row cars-contact">
             <span class="col-2 carsc-1">
-                <img class="aLogo" src="assets/avatar.png"/>
+                <img class="aAvatar" src="assets/avatar.png"/>
             </span>
-            <span class="col-6 carsc-2"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
             <span class="col-4 carsc-3">
               <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
             </span>
@@ -255,9 +259,9 @@
         <!-- contact row -->
         <div class="row cars-contact">
             <span class="col-2 carsc-1">
-                <img class="aLogo" src="assets/avatar.png"/>
+                <img class="aAvatar" src="assets/avatar.png"/>
             </span>
-            <span class="col-6 carsc-2"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
             <span class="col-4 carsc-3">
               <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
             </span>
@@ -265,9 +269,9 @@
         <!-- contact row -->
         <div class="row cars-contact">
             <span class="col-2 carsc-1">
-                <img class="aLogo" src="assets/avatar.png"/>
+                <img class="aAvatar" src="assets/avatar.png"/>
             </span>
-            <span class="col-6 carsc-2"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
+            <span class="col-6 carsc-2" routerLink="/user"><b>huda.hidhuda</b> <br/><span class="handle">@azarq_m</span></span>
             <span class="col-4 carsc-3">
               <button routerLink="/" class="col btn btn-lg btn-block btnFollow">Follow</button>
             </span>

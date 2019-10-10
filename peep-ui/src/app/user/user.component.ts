@@ -3,11 +3,12 @@ import { MatDialog } from '@angular/material';
 import { DialogpeepComponent } from '../dialogpeep/dialogpeep.component';
 
 @Component({
-  selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.scss']
 })
-export class TimelineComponent implements OnInit {
+export class UserComponent implements OnInit {
+
   constructor(
     public dialog: MatDialog
   ) { }
@@ -20,4 +21,5 @@ export class TimelineComponent implements OnInit {
       panelClass: 'app-full-bleed-dialog'
     });
   }
+
 }

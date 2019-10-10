@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { DialogpeepComponent } from '../dialogpeep/dialogpeep.component';
+import { ProfiledialogComponent } from '../profiledialog/profiledialog.component';
 
 @Component({
-  selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class TimelineComponent implements OnInit {
+export class ProfileComponent implements OnInit {
+
   constructor(
     public dialog: MatDialog
   ) { }
@@ -17,6 +19,12 @@ export class TimelineComponent implements OnInit {
 
   openDialog(){
     this.dialog.open(DialogpeepComponent, {
+      panelClass: 'app-full-bleed-dialog'
+    });
+  }
+
+  openProfileDialog(){
+    this.dialog.open(ProfiledialogComponent, {
       panelClass: 'app-full-bleed-dialog'
     });
   }

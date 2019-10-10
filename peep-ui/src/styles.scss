@@ -30,4 +30,6 @@ $peep-theme: mat-light-theme($peep-primary, $peep-accent, $peep-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Montserrat', sans-serif; }
-
+.app-full-bleed-dialog .mat-dialog-container {
+  padding: 2px;
+}

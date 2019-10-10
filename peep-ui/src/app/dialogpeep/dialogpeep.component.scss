@@ -1,0 +1,44 @@
+.container{
+   overflow: hidden;
+   .cm-peep{
+    margin: 0px;
+    padding: 20px 10px;
+    .cmp-img img{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%
+    }
+    .cmp-form{
+      textarea{
+        resize: none;
+        border: none;
+        width: 100%;
+        min-height: 150px;
+        font-size: 25px;
+        overflow: hidden;
+        &:focus{
+          outline: none !important;
+        }
+      }
+      div.cmpp-buttons{
+
+        mat-icon.mat-icon{
+          color: #2FBDE2;
+          font-size: 30px;
+          display: inline-block;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .btnSign{
+          background: #2FBDE2;
+          color: #fff;
+          border-radius: 20px;
+          max-width: 15px !important;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}

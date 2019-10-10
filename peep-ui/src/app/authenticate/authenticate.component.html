@@ -64,10 +64,18 @@
                   <mat-icon matSuffix>perm_identity</mat-icon>
               </mat-form-field>
 
-              <mat-form-field appearance="outline" class="mat-form-group" >
+              <!-- <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Year of birth</mat-label>
                   <input type="number" matInput placeholder="e.g. 1970" required>
                   <mat-icon matSuffix>date_range</mat-icon>
+              </mat-form-field> -->
+
+              <mat-form-field appearance="outline" class="mat-form-group" >
+                  <mat-label>Password</mat-label>
+                  <input type="password" matInput placeholder="******" [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
               </mat-form-field>
 
               <div class="form-label-group ">
