@@ -53,10 +53,11 @@
         </span>
 
         <span class="col-11 cmp-form">
-            <form class="" >
-              <textarea matInput placeholder="What's happening?" resize="false"></textarea>
+            <form class="" [formGroup]="timelineForm">
+                <!-- Value: {{timelineForm.value | json}} -->
+              <textarea matInput placeholder="What's happening?" formControlName="peep" resize="false"></textarea>
               <div class="row">
-                  <mat-icon class="col">image_outline</mat-icon>
+                  <mat-icon class="col" formControlName="peepImg">image_outline</mat-icon>
                   <button routerLink="" class="col btn btn-lg btn-block btnSign" mat-raised-button>peep</button>
               </div>
             </form>

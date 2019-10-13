@@ -17,17 +17,18 @@
         </div>
         <div class="card-body cb-signIn" *ngIf="isShow">
 
-          <form class="form-signin" >
+          <form class="form-signin" [formGroup]="myForm">
+            <!-- Value: {{myForm.value | json}} -->
               <br/>
               <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Your Email</mat-label>
-                  <input type="email" matInput placeholder="example@email.com" autofocus>
+                  <input type="email" matInput formControlName="email" placeholder="example@email.com" autofocus>
                   <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
 
               <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Your Password</mat-label>
-                  <input type="password" matInput placeholder="******" [type]="hide ? 'password' : 'text'">
+                  <input type="password" matInput formControlName="password" placeholder="******" [type]="hide ? 'password' : 'text'">
                   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                   </button>
@@ -44,35 +45,36 @@
 
         <!-- sign up-->
         <div class="card-body" id="cb-signup" *ngIf="!isShow">
-            <form class="form-signin">
+            <form class="form-signin" [formGroup]="signUpForm">
+                <!-- Value: {{signUpForm.value | json}} -->
 
               <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Name</mat-label>
-                  <input type="text" matInput placeholder="name" required autofocus>
+                  <input type="text" matInput formControlName="name" placeholder="name" required autofocus>
                   <mat-icon matSuffix>person_outline</mat-icon>
               </mat-form-field>
 
               <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Email</mat-label>
-                  <input type="email" matInput placeholder="example@email.com" required>
+                  <input type="email" formControlName="email" matInput placeholder="example@email.com" required>
                   <mat-icon matSuffix>email</mat-icon>
               </mat-form-field>
 
               <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Peep handle</mat-label>
-                  <input type="text" matInput placeholder="desired peep handle" required>
+                  <input type="text" matInput formControlName="handle" placeholder="desired peep handle" required>
                   <mat-icon matSuffix>perm_identity</mat-icon>
               </mat-form-field>
 
-              <!-- <mat-form-field appearance="outline" class="mat-form-group" >
+              <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Year of birth</mat-label>
-                  <input type="number" matInput placeholder="e.g. 1970" required>
+                  <input type="number" matInput formControlName="yob" placeholder="e.g. 1970" required>
                   <mat-icon matSuffix>date_range</mat-icon>
-              </mat-form-field> -->
+              </mat-form-field>
 
               <mat-form-field appearance="outline" class="mat-form-group" >
                   <mat-label>Password</mat-label>
-                  <input type="password" matInput placeholder="******" [type]="hide ? 'password' : 'text'">
+                  <input type="password" matInput formControlName="password" placeholder="******" [type]="hide ? 'password' : 'text'">
                   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                   </button>
@@ -87,7 +89,7 @@
             </form>
             <br/>
             <p class="text-center">Sign into <a class="text-primary b-anchor" (click)="showForm()">peep</a></p>
-          </div>
+        </div>
 
 
 

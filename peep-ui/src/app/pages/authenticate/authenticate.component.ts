@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-authenticate',
@@ -8,13 +9,32 @@ import { Component, OnInit } from '@angular/core';
 export class AuthenticateComponent implements OnInit {
   isShow = true;
   hide = true;
-  constructor() { }
+
+  myForm: FormGroup;
+  signUpForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.myForm = this.fb.group({
+      email : '',
+      password : '',
+    });
+
+    this.signUpForm = this.fb.group({
+      name : '',
+      email : '',
+      handle : '',
+      yob : '',
+      password : ''
+    });
+
+    // this.myForm.valueChanges.subscribe(console.log);
+    // this.signUpForm.valueChanges.subscribe(console.log);
   }
 
 
-  public showForm(){
+  public showForm() {
     this.isShow = !this.isShow;
     console.log(this.isShow);
   }

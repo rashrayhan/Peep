@@ -13,6 +13,7 @@ import { UserComponent } from './pages/user/user.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DialogpeepComponent } from './pages/dialogpeep/dialogpeep.component';
 import { ProfiledialogComponent } from './pages/profiledialog/profiledialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ProfiledialogComponent } from './pages/profiledialog/profiledialog.comp
   ],
   imports: [
     AlertModule.forRoot(),
+    ReactiveFormsModule,
     MatButtonModule,
     MatFormFieldModule,
     MatIconModule,
