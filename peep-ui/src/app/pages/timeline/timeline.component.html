@@ -81,10 +81,30 @@
               <span class="ca-action"><mat-icon> favorite_border </mat-icon></span>
               <span class="col-3 ca-count">82.5K</span>
 
-              <span class="ca-action"><mat-icon> comment </mat-icon></span>
+              <span class="ca-action" (click)="showSection()"><mat-icon> comment </mat-icon></span>
               <span class="col-3 ca-count">7.2k</span>
 
               <span class="ca-action"><mat-icon> bookmark_border </mat-icon></span>
+            </div>
+
+            <div class="container cmtt-comments" style="" *ngIf="!isShow">
+                <div class="row cmttc-comment">
+                   <form  class="col-9" [formGroup]="comment">
+                    <!-- Value: {{comment.value | json}} -->
+                    <input type="text" matInput placeholder="enter comment" formControlName="cmnt">
+                   </form>
+                   <button routerLink="" type="submit" class="col-1 btn btnSign" mat-raised-button style="">send</button>
+
+                </div>
+                <div class="row cmttc-otherComments" *ngFor="let item of commentsList ">
+                  <div class="col-2 cmttco-user">
+                      <img class="aAvatar" src="{{item.image}}" style="height: 30px; width: 30px;"/>
+                      <p style="margin-top: 5px;">{{item.user}}</p>
+                  </div>
+                  <div class="col-9 cmttco-cmt">
+                      <p>{{item.comment}}</p>
+                  </div>
+                </div>
             </div>
 
 

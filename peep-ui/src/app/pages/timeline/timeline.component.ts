@@ -9,17 +9,37 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./timeline.component.scss']
 })
 export class TimelineComponent implements OnInit {
+  isShow = true;
   timelineForm: FormGroup;
+  comment: FormGroup;
+  commentsList: any;
 
   constructor(
     public dialog: MatDialog,
     private fb: FormBuilder
-  ) { }
+  ) {
+    this.commentsList = [
+      {
+        'image' : 'assets/avatar.png',
+        'user': 'benbow',
+        'comment': 'this is hillarious'
+    },
+    {
+      'image' : 'assets/avatar.png',
+      'user': 'desh',
+      'comment': 'it is working'
+  }
+    ]
+  }
 
   ngOnInit() {
     this.timelineForm = this.fb.group({
       peep : '',
       peepImg : ''
+    });
+
+    this.comment = this.fb.group({
+      cmnt : ''
     });
   }
 
@@ -27,5 +47,10 @@ export class TimelineComponent implements OnInit {
     this.dialog.open(DialogpeepComponent, {
       panelClass: 'app-full-bleed-dialog'
     });
+  }
+
+  public showSection() {
+    this.isShow = !this.isShow;
+    console.log(this.isShow);
   }
 }

@@ -124,6 +124,28 @@
             padding: 2px !important;
           }
         }
+
+        .cmtt-comments{
+          margin-top: 10px;
+          .cmttc-comment{
+            input{
+              border: 1px solid #DDD;
+              padding: 10px;
+              border-radius: 5px;
+            }
+            button{
+              font-size:11px;
+            }
+          }
+          .cmttc-otherComments{
+            margin-top: 10px;
+            border: 0.5px solid #DDD;
+            padding-top: 10px;
+              .cmttco-user{
+                text-align: center;
+              }
+          }
+        }
       }
     }
   }
