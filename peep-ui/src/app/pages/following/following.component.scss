@@ -1,0 +1,179 @@
+.container{
+  .c-aside-left{
+    position: fixed;
+  }
+  mat-list-item.mat-list-item{
+    font-size: 14px;
+    &:hover{
+      cursor: pointer;
+      color: #1DA1F2;
+
+    }
+  }
+  .btnSign{
+    background: #2FBDE2;
+    color: #fff;
+    border-radius: 20px;
+  }
+
+  //second section
+  .c-main{
+    border-left: 0.5px solid #E6ECF0;
+    border-right: 0.5px solid #E6ECF0;
+    padding: 0px;
+    left: 25%;
+    position: relative;
+
+    .cm-title{
+      padding: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      mat-icon#cm-back{
+        color: #1DA1F2;
+        font-size: 20px;
+        text-align: right;
+
+          &:hover{
+            cursor: pointer;
+          }
+      }
+      .handle{
+        color: #8A97A4;
+      }
+    }
+    .cars-contact{
+      margin: 0;
+      border-bottom: 0.5px solid #E6ECF0;
+      padding: 10px 0px;
+      .carsc-1{
+        padding: 0px 5px;
+        img{
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+        }
+      }
+      .carsc-2{
+        padding: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        &:hover{
+          cursor: pointer;
+        }
+        .handle{
+          color: #8A97A4;
+        }
+        .bio{
+          font-weight: normal;
+        }
+      }
+      .carsc-3{
+        padding: 0px;
+        padding-right: 5px;
+        .btnFollow{
+          color: #1DA1F2;
+          border: 1px solid #1DA1F2;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          background: #FFF;
+          border-radius: 20px;
+          font-weight: bold;
+          font-size: 10px;
+        }
+      }
+      .carsc-f-btn{
+        button{
+          background: #1DA1F2 !important;
+          color: #fff !important;
+            &:hover{
+              background: #CA2055 !important;
+              border: 1px solid #CA2055 !important;
+            }
+        }
+      }
+    }
+
+
+  }
+
+  // aside-right
+  .c-aside-right{
+    right: 5%;
+    position: fixed;
+    padding-top: 10px;
+
+    .car-search{
+      mat-form-field.mat-form-field{
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+
+    .car-suggest{
+      background: #F5F8FA;
+      padding: 10px 0px;
+      border-radius: 10px;
+      h6{
+        font-family: 'Fira Sans', sans-serif;
+        padding: 10px;
+        border-bottom: 0.5px solid #E6ECF0;
+        font-weight: bolder;
+      }
+    }
+    .cars-contact{
+      margin: 0;
+      border-bottom: 0.5px solid #E6ECF0;
+      padding: 5px 0px;
+      .carsc-1{
+        padding: 0px 5px;
+        img{
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+        }
+      }
+      .carsc-2{
+        padding: 0px;
+        font-size: 12px;
+        font-weight: bold;
+        &:hover{
+          cursor: pointer;
+        }
+        .handle{
+          color: #8A97A4;
+        }
+      }
+      .carsc-3{
+        padding: 0px;
+        padding-right: 5px;
+        .btnFollow{
+          color: #1DA1F2;
+          border: 1px solid #1DA1F2;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+          background: #FFF;
+          border-radius: 20px;
+          font-weight: bold;
+          font-size: 10px;
+        }
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .c-main{
+    width: 90%;
+  }
+  .aLogo{
+    display: none;
+  }
+  .cmp-form{
+    textarea{
+      font-size: 14px;
+    }
+  }
+  .c-aside-right{
+    display: none;
+  }
+
+}
