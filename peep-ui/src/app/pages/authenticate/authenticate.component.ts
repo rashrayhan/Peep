@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-authenticate',
@@ -17,7 +17,10 @@ export class AuthenticateComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      email : '',
+      email : ['', [
+        Validators.required,
+        Validators.email
+      ]],
       password : '',
     });
 
@@ -33,6 +36,9 @@ export class AuthenticateComponent implements OnInit {
     // this.signUpForm.valueChanges.subscribe(console.log);
   }
 
+  // get email(){
+  //   return this.myForm.get('email');
+  // }
 
   public showForm() {
     this.isShow = !this.isShow;
