@@ -21,83 +21,116 @@
     border-left: 0.5px solid #E6ECF0;
     border-right: 0.5px solid #E6ECF0;
     padding: 0px;
-    left: 18%;
+    left: 25%;
     position: relative;
-
-    .cm-title{
-      padding: 10px;
-      font-size: 12px;
+    h5.cm-title{
+      padding: 15px;
       font-weight: bold;
-      mat-icon#cm-back{
-        color: #1DA1F2;
-        font-size: 20px;
-        text-align: right;
-
-          &:hover{
-            cursor: pointer;
-          }
-      }
-      .handle{
-        color: #8A97A4;
-      }
-    }
-    .cars-contact{
-      margin: 0;
+      letter-spacing: 0.5px;
       border-bottom: 0.5px solid #E6ECF0;
+    }
+
+    .cm-peep{
+      margin: 0px;
       padding: 10px 0px;
-      .carsc-1{
-        padding: 0px 5px;
-        img{
-          height: 35px;
-          width: 35px;
-          border-radius: 50%;
-        }
+      border-bottom: 5px solid #E6ECF0;
+      .cmp-img img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%
       }
-      .carsc-2{
-        padding: 0px;
-        font-size: 12px;
-        font-weight: bold;
-        &:hover{
-          cursor: pointer;
+      .cmp-form{
+        textarea{
+          resize: none;
+          border: none;
+          width: 100%;
+          font-size: 22px;
+          overflow: hidden;
+          &:focus{
+            outline: none !important;
+          }
         }
-        .handle{
-          color: #8A97A4;
-        }
-        .bio{
-          font-weight: normal;
-        }
-      }
-      .carsc-3{
-        padding: 0px;
-        padding-right: 5px;
-        .btnFollow{
-          color: #1DA1F2;
-          border: 1px solid #1DA1F2;
-          font-family:Verdana, Geneva, Tahoma, sans-serif;
-          background: #FFF;
-          border-radius: 20px;
-          font-weight: bold;
-          font-size: 10px;
-        }
-      }
-      .carsc-f-btn{
-        button{
-          background: #1DA1F2 !important;
-          color: #fff !important;
+        div{
+          padding-right: 20px;
+          mat-icon.mat-icon{
+            color: #2FBDE2;
+            font-size: 30px;
+            display: inline-block;
+
             &:hover{
-              background: #CA2055 !important;
-              border: 1px solid #CA2055 !important;
+              cursor: pointer;
             }
+          }
+          button{
+            display: inline-block;
+            max-width: 20px !important;
+          }
         }
       }
     }
 
 
+    .cm-timeline{
+      padding: 10px;
+      border-bottom: 0.5px solid #E6ECF0;
+      margin: 0px;
+      &:hover{
+        cursor: pointer;
+        background: #F5F8FA;
+      }
+      .cmt-img img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+      .cmt-text{
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        span#cmttt-handle{
+          color: #8699A5
+        }
+        .cmtt-img {
+          margin-bottom: 10px;
+          img{
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #E6ECF0;
+          }
+        }
+
+        .cmtt-action{
+          width: 100%;
+          margin: 0px;
+          color: #657786;
+
+          .ca-action:first-child{
+
+            &:hover{
+              color: #E23237;
+            }
+          }
+          .ca-action:nth-child(3){
+
+            &:hover{
+              color: #2FBDE2;;
+            }
+          }
+          .ca-action:last-child{
+            &:hover{
+              color: #77B255;
+            }
+          }
+          .ca-count{
+            padding: 2px !important;
+          }
+        }
+      }
+    }
   }
 
   // aside-right
   .c-aside-right{
-    right: 8%;
+    right: 5%;
     position: fixed;
     padding-top: 10px;
 

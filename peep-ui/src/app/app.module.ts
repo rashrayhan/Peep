@@ -7,12 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertModule } from 'ngx-bootstrap';
 import {MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule, MatListModule, MatTabsModule} from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
-import { AuthenticateComponent } from './authenticate/authenticate.component';
-import { FollowingComponent } from './following/following.component';
-import { UserComponent } from './user/user.component';
-import { ProfileComponent } from './profile/profile.component';
-import { DialogpeepComponent } from './dialogpeep/dialogpeep.component';
-import { ProfiledialogComponent } from './profiledialog/profiledialog.component';
+import { AuthenticateComponent } from './pages/authenticate/authenticate.component';
+import { FollowingComponent } from './pages/following/following.component';
+import { UserComponent } from './pages/user/user.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { DialogpeepComponent } from './pages/dialogpeep/dialogpeep.component';
+import { ProfiledialogComponent } from './pages/profiledialog/profiledialog.component';
 
 
 @NgModule({
